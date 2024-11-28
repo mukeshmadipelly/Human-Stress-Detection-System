@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMate - Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7faff;
+        }
+
+        /* Form Container */
+        .container {
+            margin: 50px auto;
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;  /* Increased padding */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;  /* Increased font size */
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;  /* Increased padding */
+            border: none;
+            border-radius: 4px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;  /* Increased font size */
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .alt-link {
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .alt-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .alt-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Remove password instruction */
+        .form-group .helptext {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Form Container -->
+    <div class="container">
+        <h2>Register</h2>
+        <form method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label for="password1">Password</label>
+                {{ form.password1 }}
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                {{ form.password2 }}
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="alt-link">
+                Already have an account? <a href="{% url 'login' %}">Login</a>
+            </div>
+        </form>        
+    </div>
+</body>
+</html>

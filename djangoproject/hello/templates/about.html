@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About SmartMate</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c82ff;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .navbar ul li a.login-btn {
+      background: #2c82ff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .navbar ul li a.login-btn:hover {
+      background: #1a5adb;
+    }
+
+    /* Main Section Styles */
+    .main-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 5rem; /* To adjust for the fixed navbar */
+    }
+
+    .main-section .about-card {
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      max-width: 700px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .main-section .about-card h1 {
+      font-size: 2rem;
+      color: #2c82ff;
+      margin-bottom: 1rem;
+    }
+
+    .main-section .about-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">SmartMate</div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'support' %}">Support</a></li>
+        <li><a href="{% url 'login' %}" class="login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="main-section">
+    <div class="about-card">
+      <h1>About SmartMate</h1>
+      <p>
+        SmartMate is an innovative stress detection and prediction system that uses Artificial Neural Networks (ANN) to analyze various physiological parameters and determine stress levels. Our model takes into account multiple factors including sleep patterns, vital signs, and physical movements to provide accurate stress assessments.
+      </p>
+      <p>
+        The system helps users track their mental health by monitoring key indicators and providing timely insights about their stress levels. This enables users to take proactive steps in managing their mental well-being.
+      </p>
+    </div>
+  </main>
+</body>
+</html>
