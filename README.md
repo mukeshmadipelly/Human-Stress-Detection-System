@@ -35,7 +35,7 @@ This project offers a user-friendly interface and intuitive navigation, making i
 
 ## **Tech Stack**
 - **Frontend:**
-  - HTML, CSS, JavaScript (for responsive and interactive design).
+  - HTML, CSS.
   
 - **Backend:**
   - Django (Python framework for web development).
