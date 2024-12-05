@@ -53,7 +53,7 @@ This project offers a user-friendly interface and intuitive navigation, making i
 ### 1. **Clone the Repository**
 ```bash
 git clone <https://github.com/mukeshmadipelly/Human-Stress-Detection-System>
-cd SmartMate
+cd djangoproject
 ```
 
 ### 2. **Install Dependencies**
