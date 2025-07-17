@@ -174,7 +174,6 @@ SmartMate/
 ---
 
 ## **Contributors**
-- **Your Name:Madipelly Mukesh[]
 - Guided by **Esaki Rahul** during the internship at Infosys Springboard.
 
 ---
